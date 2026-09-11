@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ziaro Massyahid — Junior Full-Stack Web Developer</title>
+<meta name="description" content="Portofolio Ziaro Massyahid — Junior Full-Stack Web Developer (Laravel, PHP, Next.js, React). Berpengalaman magang di Diskominfo Kota Pekalongan.">
+<style>
+  :root{
+    --bg:#0b0f14; --panel:#121821; --panel2:#171f2a; --line:#233040;
+    --text:#e8eef6; --muted:#9aa9bb; --accent:#4da3ff; --accent2:#22d3a7;
+    --radius:14px; --max:1080px;
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{margin:0;background:var(--bg);color:var(--text);
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    line-height:1.6;-webkit-font-smoothing:antialiased}
+  a{color:var(--accent);text-decoration:none}
+  a:hover{text-decoration:underline}
+  .wrap{max-width:var(--max);margin:0 auto;padding:0 22px}
+  header{position:sticky;top:0;z-index:20;backdrop-filter:blur(10px);
+    background:rgba(11,15,20,.82);border-bottom:1px solid var(--line)}
+  nav{display:flex;align-items:center;justify-content:space-between;padding:14px 0;gap:16px}
+  nav .brand{font-weight:700;letter-spacing:.3px}
+  nav .links{display:flex;gap:18px;font-size:14px;flex-wrap:wrap}
+  nav .links a{color:var(--muted)}
+  nav .links a:hover{color:var(--text);text-decoration:none}
+
+  section{padding:62px 0;border-bottom:1px solid var(--line)}
+  section:last-of-type{border-bottom:none}
+
+  .hero{padding:72px 0 58px}
+  .badge{display:inline-flex;align-items:center;gap:8px;font-size:13px;color:var(--accent2);
+    border:1px solid rgba(34,211,167,.35);background:rgba(34,211,167,.08);
+    padding:5px 12px;border-radius:999px;margin-bottom:18px}
+  .dot{width:7px;height:7px;border-radius:50%;background:var(--accent2)}
+  h1{font-size:clamp(30px,5vw,46px);line-height:1.12;margin:0 0 10px}
+  h1 span{color:var(--accent)}
+  .lead{font-size:17px;color:var(--muted);max-width:64ch;margin:0 0 22px}
+  .cta{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:26px}
+  .btn{display:inline-block;padding:11px 18px;border-radius:10px;font-size:14px;font-weight:600;
+    border:1px solid var(--line);background:var(--panel);color:var(--text)}
+  .btn.primary{background:var(--accent);border-color:var(--accent);color:#04121f}
+  .btn:hover{text-decoration:none;transform:translateY(-1px);transition:.15s}
+  .stats{display:flex;gap:34px;flex-wrap:wrap}
+  .stat b{display:block;font-size:24px}
+  .stat span{font-size:13px;color:var(--muted)}
+
+  h2{font-size:13px;text-transform:uppercase;letter-spacing:1.4px;color:var(--accent);
+    margin:0 0 6px}
+  .h2sub{font-size:clamp(21px,3vw,28px);font-weight:700;margin:0 0 26px}
+
+  .grid{display:grid;gap:16px}
+  .g3{grid-template-columns:repeat(auto-fit,minmax(250px,1fr))}
+  .g2{grid-template-columns:repeat(auto-fit,minmax(320px,1fr))}
+  .card{background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);padding:20px}
+  .card h3{margin:0 0 6px;font-size:17px}
+  .card p{margin:0 0 12px;color:var(--muted);font-size:14.5px}
+  .tags{display:flex;gap:7px;flex-wrap:wrap;margin-top:10px}
+  .tag{font-size:12px;color:var(--muted);background:var(--panel2);border:1px solid var(--line);
+    padding:3px 9px;border-radius:999px}
+  .proj{display:flex;flex-direction:column;height:100%}
+  .proj ul{margin:0 0 6px;padding-left:18px;color:var(--muted);font-size:14.5px}
+  .proj li{margin-bottom:4px}
+  .proj .links{margin-top:auto;padding-top:12px;font-size:14px;display:flex;gap:14px;flex-wrap:wrap}
+  .note{font-size:12.5px;color:var(--muted);font-style:italic}
+
+  .skillrow{display:grid;grid-template-columns:150px 1fr;gap:12px;padding:12px 0;
+    border-bottom:1px dashed var(--line);font-size:14.5px}
+  .skillrow:last-child{border-bottom:none}
+  .skillrow b{color:var(--text)}
+  .skillrow span{color:var(--muted)}
+
+  .exp{border-left:2px solid var(--accent);padding:0 0 0 18px;margin:0 0 22px}
+  .exp h3{margin:0 0 2px;font-size:17px}
+  .exp .meta{color:var(--muted);font-size:13.5px;margin-bottom:10px}
+  .exp ul{margin:0;padding-left:18px;color:var(--muted);font-size:14.5px}
+  .exp li{margin-bottom:5px}
+
+  footer{padding:40px 0 54px;text-align:center;color:var(--muted);font-size:14px}
+  @media (max-width:560px){
+    nav .links{gap:12px;font-size:13px}
+    section{padding:48px 0}
+    .skillrow{grid-template-columns:1fr;gap:2px}
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <nav>
+      <div class="brand">Ziaro Massyahid</div>
+      <div class="links">
+        <a href="#proyek">Proyek</a>
+        <a href="#keahlian">Keahlian</a>
+        <a href="#pengalaman">Pengalaman</a>
+        <a href="#kontak">Kontak</a>
+      </div>
+    </nav>
+  </div>
+</header>
+
+<div class="wrap hero">
+  <div class="badge"><span class="dot"></span> Tersedia untuk kerja remote — fresh graduate</div>
+  <h1>Junior <span>Full-Stack Web Developer</span><br>Laravel · PHP · Next.js · React</h1>
+  <p class="lead">
+    Fresh graduate Teknik Informatika yang membangun ulang sistem informasi pemerintahan dari CMS
+    menjadi aplikasi <strong>Laravel full-stack</strong> saat magang di Diskominfo Kota Pekalongan.
+    Terbiasa menangani proyek dari analisis kebutuhan, desain basis data relasional, hingga
+    implementasi dan pengujian — plus 8+ aplikasi POS &amp; pembukuan untuk UMKM.
+  </p>
+  <div class="cta">
+    <a class="btn primary" href="#kontak">Hubungi saya</a>
+    <a class="btn" href="cv.pdf" target="_blank" rel="noopener">Unduh CV (PDF)</a>
+    <a class="btn" href="https://github.com/ZeeMaicee" target="_blank" rel="noopener">GitHub</a>
+    <a class="btn" href="https://www.linkedin.com/in/ziaro-masasyahid-a68380354/" target="_blank" rel="noopener">LinkedIn</a>
+  </div>
+  <div class="stats">
+    <div class="stat"><b>3 bulan</b><span>magang pengembangan web</span></div>
+    <div class="stat"><b>11+ tabel</b><span>skema basis data relasional (KIBAS)</span></div>
+    <div class="stat"><b>9 proyek</b><span>Laravel &amp; Next.js</span></div>
+  </div>
+</div>
+
+<section id="proyek">
+  <div class="wrap">
+    <h2>Portofolio</h2>
+    <p class="h2sub">Proyek yang saya bangun</p>
+    <div class="grid g2">
+
+      <div class="card proj">
+        <h3>ALURTA — Aplikasi Operasional Barbershop</h3>
+        <p>Aplikasi kasir &amp; manajemen operasional untuk barbershop: POS ramah tablet, booking
+        online, komisi barber otomatis, pengeluaran kas, tutup kasir harian, dan laporan Excel.</p>
+        <ul>
+          <li>Multi-tenant dengan <strong>Row Level Security</strong> per barbershop</li>
+          <li>Perhitungan uang diverifikasi di server + operasi atomik lewat PostgreSQL RPC</li>
+          <li>Notifikasi WhatsApp (Fonnte) yang kegagalannya tidak membatalkan transaksi</li>
+        </ul>
+        <div class="tags">
+          <span class="tag">Next.js 16</span><span class="tag">React 19</span><span class="tag">TypeScript</span>
+          <span class="tag">Tailwind</span><span class="tag">Supabase</span><span class="tag">PostgreSQL</span>
+        </div>
+        <div class="links"><span class="note">Kode privat — demo &amp; screenshot tersedia atas permintaan</span></div>
+      </div>
+
+      <div class="card proj">
+        <h3>KIBAS — Portal Informasi &amp; Monitoring Iklim</h3>
+        <p>Proyek magang di Diskominfo Kota Pekalongan: membangun ulang sistem dari WordPress yang
+        lumpuh akibat serangan keamanan menjadi aplikasi Laravel yang aman dan terstruktur.</p>
+        <ul>
+          <li>RBAC 4 peran (Admin, Editor, Reviewer, Kontributor) + alur review publikasi</li>
+          <li>Monitoring bendungan: TMA, debit air, koordinat, batas siaga &amp; awas, CCTV</li>
+          <li>Publikasi berita, arsip dokumen, agenda dengan hitung mundur</li>
+        </ul>
+        <div class="tags">
+          <span class="tag">Laravel</span><span class="tag">PHP</span><span class="tag">MySQL</span>
+          <span class="tag">Eloquent</span><span class="tag">Spatie</span>
+        </div>
+        <div class="links"><span class="note">Milik instansi — kode &amp; screenshot menyesuaikan izin</span></div>
+      </div>
+
+      <div class="card proj">
+        <h3>Aplikasi POS &amp; Pembukuan UMKM</h3>
+        <p>Beberapa aplikasi point-of-sale untuk usaha kecil (dimsum, konter, toko buku): manajemen
+        produk &amp; stok, transaksi penjualan, kas masuk/keluar, dan laporan harian.</p>
+        <ul>
+          <li>Arsitektur MVC dengan migration &amp; seeder untuk basis data yang reprodusibel</li>
+          <li>Antarmuka operasional yang cepat dipakai kasir</li>
+        </ul>
+        <div class="tags">
+          <span class="tag">Laravel</span><span class="tag">PHP</span><span class="tag">MySQL</span>
+          <span class="tag">Blade</span><span class="tag">Bootstrap</span>
+        </div>
+        <div class="links"><a href="https://github.com/ZeeMaicee/dimsum-pos" target="_blank" rel="noopener">Lihat kode di GitHub →</a></div>
+      </div>
+
+      <div class="card proj">
+        <h3>PENTEST Scanner</h3>
+        <p>Alat pemindaian kerentanan sederhana untuk kebutuhan pembelajaran keamanan aplikasi web —
+        minat saya pada sisi keamanan sistem.</p>
+        <div class="tags"><span class="tag">Python</span><span class="tag">Security</span></div>
+        <div class="links"><a href="https://github.com/ZeeMaicee/PENTEST_SCANNER" target="_blank" rel="noopener">Lihat repo →</a></div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section id="keahlian">
+  <div class="wrap">
+    <h2>Keahlian</h2>
+    <p class="h2sub">Teknologi yang saya pakai sehari-hari</p>
+    <div class="skillrow"><b>Backend</b><span>PHP, Laravel, Eloquent ORM, REST API, autentikasi &amp; otorisasi, RBAC (Spatie), keamanan dasar (CSRF, proteksi SQL Injection)</span></div>
+    <div class="skillrow"><b>Frontend</b><span>JavaScript, TypeScript, React, Next.js, Tailwind CSS, HTML, CSS, Blade</span></div>
+    <div class="skillrow"><b>Basis data</b><span>MySQL, PostgreSQL (Supabase), desain skema relasional, migration, query &amp; filtering</span></div>
+    <div class="skillrow"><b>Tools</b><span>Git &amp; GitHub, VS Code, Laravel Herd, Postman, Composer, npm, ExcelJS</span></div>
+    <div class="skillrow"><b>Administrasi data</b><span>Entri &amp; validasi data, Microsoft Office / Google Sheets, dokumentasi teknis (PRD, panduan)</span></div>
+  </div>
+</section>
+
+<section id="pengalaman">
+  <div class="wrap">
+    <h2>Pengalaman</h2>
+    <p class="h2sub">Perjalanan kerja</p>
+    <div class="exp">
+      <h3>Magang — Diskominfo Kota Pekalongan</h3>
+      <div class="meta">Maret 2026 – Mei 2026 · Proyek KIBAS (Mitra Ketahanan Iklim Berbasis Masyarakat)</div>
+      <ul>
+        <li>Membangun ulang aplikasi web dari CMS WordPress yang tidak dapat diakses (serangan keamanan, error 502) menjadi aplikasi Laravel full-stack.</li>
+        <li>Analisis kebutuhan bersama client, perancangan wireframe antarmuka, dan desain 11+ tabel basis data relasional.</li>
+        <li>Implementasi RBAC 4 peran, alur review publikasi, monitoring bendungan, serta dokumentasi teknis.</li>
+      </ul>
+    </div>
+    <div class="exp" style="border-color:var(--accent2)">
+      <h3>S1 Teknik Informatika — Institut Widya Pratama</h3>
+      <div class="meta">Lulus 2026 · Tugas akhir: aplikasi web Laravel full-stack untuk mitra ketahanan iklim</div>
+    </div>
+  </div>
+</section>
+
+<section id="kontak">
+  <div class="wrap" style="text-align:center">
+    <h2>Kontak</h2>
+    <p class="h2sub">Siap mulai kapan saja — remote</p>
+    <div class="cta" style="justify-content:center">
+      <a class="btn primary" href="mailto:ziaromassyahid.official@gmail.com">Email saya</a>
+      <a class="btn" href="https://wa.me/6281568490896" target="_blank" rel="noopener">WhatsApp</a>
+      <a class="btn" href="https://github.com/ZeeMaicee" target="_blank" rel="noopener">GitHub</a>
+      <a class="btn" href="https://www.linkedin.com/in/ziaro-masasyahid-a68380354/" target="_blank" rel="noopener">LinkedIn</a>
+    </div>
+    <p class="note" style="margin-top:18px">Kabupaten Pekalongan, Jawa Tengah · terbuka untuk remote penuh</p>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">© 2026 Ziaro Massyahid — dibangun sendiri, tanpa template.</div>
+</footer>
+
+</body>
+</html>
