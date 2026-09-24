@@ -6,4 +6,5 @@ Halaman portofolio pribadi: **Junior Full-Stack Web Developer** (Laravel · PHP 
 - CV: `cv.pdf`
 
 Dibuka sebagai GitHub Pages. Isi mencakup proyek, keahlian, pengalaman magang di
-Diskominfo Kota Pekalongan, dan kontak.
+Diskominfo Kota Pekalongan, sertifikat &amp; kredensial (Dicoding, praktik kerja Diskominfo,
+piagam KRENOVA Bapperida), dan kontak.

@@ -27,7 +27,7 @@
   nav .links a{color:var(--muted)}
   nav .links a:hover{color:var(--text);text-decoration:none}
 
-  section{padding:62px 0;border-bottom:1px solid var(--line)}
+  section{padding:62px 0;border-bottom:1px solid var(--line);scroll-margin-top:74px}
   section:last-of-type{border-bottom:none}
 
   .hero{padding:72px 0 58px}
@@ -78,7 +78,49 @@
   .exp ul{margin:0;padding-left:18px;color:var(--muted);font-size:14.5px}
   .exp li{margin-bottom:5px}
 
+  /* — Sertifikat: satu piagam menonjol + daftar kredensial yang bisa dipindai — */
+  .podium{display:grid;grid-template-columns:auto 1fr;gap:22px;align-items:center;
+    background:linear-gradient(135deg,rgba(34,211,167,.10),rgba(34,211,167,.03) 55%,transparent);
+    border:1px solid rgba(34,211,167,.30);border-radius:var(--radius);
+    padding:22px 24px;margin-bottom:34px}
+  .podium .rank{display:flex;flex-direction:column;align-items:center;justify-content:center;
+    min-width:108px;padding-right:22px;border-right:1px dashed rgba(34,211,167,.35)}
+  .podium .rank b{font-size:46px;line-height:1;color:var(--accent2);letter-spacing:-1.5px}
+  .podium .rank span{font-size:11px;letter-spacing:1.7px;text-transform:uppercase;
+    color:var(--accent2);margin-top:5px}
+  .podium h3{margin:0 0 7px;font-size:19px}
+  .podium p{margin:0 0 13px;color:var(--muted);font-size:14.5px;max-width:70ch}
+
+  .credline{display:flex;align-items:baseline;gap:10px;flex-wrap:wrap}
+  .credlabel{font-size:11px;text-transform:uppercase;letter-spacing:1.2px;color:var(--muted)}
+  .cred{font-family:ui-monospace,SFMono-Regular,"SF Mono",Menlo,Consolas,monospace;
+    font-size:13.5px;letter-spacing:.4px;color:var(--accent);background:var(--panel2);
+    border:1px solid var(--line);border-radius:7px;padding:3px 9px;white-space:nowrap}
+  a.cred:hover{text-decoration:none;border-color:var(--accent);color:var(--text)}
+  .creddate{font-size:12.5px;color:var(--muted)}
+
+  .register{display:flex;flex-direction:column;border-top:1px dashed var(--line)}
+  .reg{display:grid;grid-template-columns:190px 1fr auto;gap:22px;align-items:start;
+    padding:22px 2px;border-bottom:1px dashed var(--line)}
+  .reg:last-child{border-bottom:none}
+  .reg .who{display:flex;flex-direction:column;gap:7px}
+  .reg .issuer{font-size:13.5px;font-weight:600;line-height:1.35}
+  .reg .yr{font-size:12.5px;color:var(--muted);letter-spacing:.4px}
+  .reg .what h3{margin:0 0 6px;font-size:16.5px}
+  .reg .what p{margin:0;color:var(--muted);font-size:14px;max-width:54ch}
+  .reg .credcol{display:flex;flex-direction:column;align-items:flex-end;gap:7px;text-align:right}
+  .reg .credcol .credlabel{text-align:right}
+
   footer{padding:40px 0 54px;text-align:center;color:var(--muted);font-size:14px}
+  @media (max-width:760px){
+    .podium{grid-template-columns:1fr;gap:16px}
+    .podium .rank{flex-direction:row;align-items:baseline;justify-content:flex-start;gap:10px;
+      border-right:none;border-bottom:1px dashed rgba(34,211,167,.35);padding:0 0 12px}
+    .podium .rank span{margin-top:0}
+    .reg{grid-template-columns:1fr;gap:11px}
+    .reg .credcol{align-items:flex-start;text-align:left}
+    .reg .credcol .credlabel{text-align:left}
+  }
   @media (max-width:560px){
     nav .links{gap:12px;font-size:13px}
     section{padding:48px 0}
@@ -96,6 +138,7 @@
         <a href="#proyek">Proyek</a>
         <a href="#keahlian">Keahlian</a>
         <a href="#pengalaman">Pengalaman</a>
+        <a href="#sertifikat">Sertifikat</a>
         <a href="#kontak">Kontak</a>
       </div>
     </nav>
@@ -218,6 +261,104 @@
       <h3>S1 Teknik Informatika — Institut Widya Pratama</h3>
       <div class="meta">Angkatan 2023 · IPK 3.97/4.00 · perkiraan lulus Mei 2027 · sedang menyusun skripsi</div>
     </div>
+  </div>
+</section>
+
+<section id="sertifikat">
+  <div class="wrap">
+    <h2>Sertifikat</h2>
+    <p class="h2sub">Kredensial yang bisa diverifikasi</p>
+
+    <div class="podium">
+      <div class="rank"><b>15</b><span>Besar</span></div>
+      <div>
+        <h3>Finalis KRENOVA Kabupaten Pekalongan 2026</h3>
+        <p>Piagam penghargaan atas inovasi <strong>SIGAP (Sistem Informasi Tanggap Bencana)</strong>,
+        dinilai oleh Badan Perencanaan Pembangunan, Riset dan Inovasi Daerah (Bapperida)
+        Kabupaten Pekalongan.</p>
+        <div class="credline">
+          <span class="credlabel">No. piagam</span>
+          <span class="cred">800.1.12.8/64.3/2026</span>
+          <span class="creddate">17 Maret 2026</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="register">
+
+      <div class="reg">
+        <div class="who">
+          <span class="issuer">Dinas Komunikasi dan Informatika Kota Pekalongan</span>
+          <span class="yr">2026</span>
+        </div>
+        <div class="what">
+          <h3>Praktik Kerja (Magang)</h3>
+          <p>Mengikuti kegiatan Praktik Kerja pada kantor Dinas Komunikasi dan Informatika
+          Kota Pekalongan, 02 Maret – 31 Mei 2026, dengan predikat <strong>A (Sangat Baik)</strong>.</p>
+        </div>
+        <div class="credcol">
+          <span class="credlabel">No. sertifikat</span>
+          <span class="cred">860/95/2026</span>
+          <span class="creddate">Pekalongan, 09 Juni 2026</span>
+        </div>
+      </div>
+
+      <div class="reg">
+        <div class="who">
+          <span class="issuer">Dicoding</span>
+          <span class="yr">2026</span>
+        </div>
+        <div class="what">
+          <h3>Belajar Dasar Pemrograman JavaScript</h3>
+          <p>Fondasi JavaScript untuk pengembangan aplikasi web dengan Node.js — 46 jam,
+          ujian akhir dan submission.</p>
+        </div>
+        <div class="credcol">
+          <span class="credlabel">ID kredensial</span>
+          <a class="cred" href="https://www.dicoding.com/certificates/1OP8RN9WVZQK" target="_blank" rel="noopener">1OP8RN9WVZQK</a>
+          <span class="creddate">07 April 2026 · berlaku s.d. 07 April 2029</span>
+        </div>
+      </div>
+
+      <div class="reg">
+        <div class="who">
+          <span class="issuer">Dicoding</span>
+          <span class="yr">2026</span>
+        </div>
+        <div class="what">
+          <h3>Belajar Dasar Pemrograman Web</h3>
+          <p>Fondasi HTML &amp; CSS: elemen semantik, box model, layouting, hingga layout
+          responsif dengan Flexbox — 41 jam.</p>
+        </div>
+        <div class="credcol">
+          <span class="credlabel">ID kredensial</span>
+          <a class="cred" href="https://www.dicoding.com/certificates/NVP7W8284ZR0" target="_blank" rel="noopener">NVP7W8284ZR0</a>
+          <span class="creddate">23 Februari 2026 · berlaku s.d. 23 Februari 2029</span>
+        </div>
+      </div>
+
+      <div class="reg">
+        <div class="who">
+          <span class="issuer">Dicoding</span>
+          <span class="yr">2026</span>
+        </div>
+        <div class="what">
+          <h3>Belajar Dasar AI</h3>
+          <p>Konsep dasar Artificial Intelligence, data untuk AI, pengantar Machine Learning,
+          dan Deep Learning — 10 jam.</p>
+        </div>
+        <div class="credcol">
+          <span class="credlabel">ID kredensial</span>
+          <a class="cred" href="https://www.dicoding.com/certificates/N9ZO2GYLRPG5" target="_blank" rel="noopener">N9ZO2GYLRPG5</a>
+          <span class="creddate">07 Februari 2026 · berlaku s.d. 07 Februari 2029</span>
+        </div>
+      </div>
+
+    </div>
+
+    <p class="note" style="margin-top:24px">Setiap ID Dicoding di atas bisa diklik dan dibuka langsung
+    di halaman verifikasi resmi. Piagam KRENOVA dan sertifikat praktik kerja tersedia sebagai berkas
+    asli atas permintaan.</p>
   </div>
 </section>
 
